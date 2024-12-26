@@ -1,0 +1,17 @@
+FROM eclipse-temurin
+
+WORKDIR /app
+
+COPY .mvn/ .mvn
+
+COPY mvnw pom.xml
+
+
+RUN ./mvnw dependency:go-offline
+
+
+COPY src/main/java ./src 
+
+EXPOSE 8080
+
+ENTRYPOINT [&amp;quot;java&amp;quot;, &amp;quot;-jar&amp;quot;, &amp;quot;/app.jar&amp;quot;]

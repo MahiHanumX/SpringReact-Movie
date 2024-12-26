@@ -1,0 +1,35 @@
+package com.mahi;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory;
+import org.springframework.boot.web.server.WebServerFactoryCustomizer;
+import org.springframework.context.annotation.Bean;
+
+@SpringBootApplication
+public class DemoApplication {
+	public static void main(String[] args) {
+		SpringApplication.run(DemoApplication.class, args);
+	}
+	@Bean
+	public WebServerFactoryCustomizer<TomcatServletWebServerFactory> serverCustomizer() {
+		return factory -> {
+			factory.setPort(8081); // Set the port number
+			factory.setContextPath("/api/v1/"); // Set the context path
+			// Add more custom configurations here
+		};
+	}
+	@Bean
+	public WebMvcConfigurer corsConfigurer() {
+		return new WebMvcConfigurer() {
+			@Override
+			public void addCorsMappings(CorsRegistry registry) {
+				registry.addMapping("/**")
+						.allowedOrigins("*")
+						.allowedMethods("*")
+						.allowedHeaders("*")
+						.allowCredentials(false).maxAge(3600);
+			}
+		};
+	}
+}

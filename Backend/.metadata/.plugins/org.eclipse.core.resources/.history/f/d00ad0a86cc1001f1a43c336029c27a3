@@ -1,0 +1,5 @@
+spring.application.name=demo
+server.port=2525
+
+spring.data.mongodb.database=sample_mflix
+spring.data.mongodb.uri=mongodb+srv://maheshmalviya734:mahesh734%40@cluster0.efyju.mongodb.net/

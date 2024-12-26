@@ -1,0 +1,10 @@
+com\mahi\DemoApplication.class
+com\mahi\movies\MovieRepository.class
+com\mahi\movies\Movie.class
+com\mahi\movies\MovieService.class
+com\mahi\movies\ReviewService.class
+com\mahi\DemoApplication$1.class
+com\mahi\movies\Review.class
+com\mahi\movies\ReviewRepository.class
+com\mahi\movies\MovieController.class
+com\mahi\movies\ReviewController.class

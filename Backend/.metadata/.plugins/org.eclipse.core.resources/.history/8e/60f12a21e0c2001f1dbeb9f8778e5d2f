@@ -1,0 +1,5 @@
+spring.data.mongodb.uri=mongodb+srv://maheshmalviya734:GkLEB2usRHvG1Ldh@cluster0.lp9lu.mongodb.net/
+spring.data.mongodb.database=movies
+server.port=8082
+
+spring.devtools.livereload.enabled=false

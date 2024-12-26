@@ -1,0 +1,8 @@
+spring.application.name=demo
+
+spring.data.mongodb.host=localhost
+spring.data.mongodb.database=movie-api-db
+
+server.port=2525
+
+spring.data.mongodb.uri=mongodb+srv://maheshmalviya734:Mahesh734%mahi
